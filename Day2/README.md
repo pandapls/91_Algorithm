@@ -22,7 +22,6 @@
 
 
 ```javascript
-（此处撰写代码）
 
 var shortestToChar = function (s, c) {
   const result = [];

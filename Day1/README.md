@@ -45,7 +45,6 @@
 
 
 ```javascript
-（此处撰写代码）
 
 var addToArrayForm = function (num, k) {
   // 利用k的取余操作 对num中倒叙进行相加

@@ -35,3 +35,40 @@
 如果 A.length > 1，那么 A[0] != 0
 
 ```
+
+
+### 思路
+
+（此处撰写思路）
+
+### 代码
+
+
+```javascript
+（此处撰写代码）
+
+var addToArrayForm = function (num, k) {
+  // 利用k的取余操作 对num中倒叙进行相加
+  const ret = [];
+  const n = num.length;
+
+  for (let i = n - 1; i >= 0; --i) {
+    let sum = num[i] + k % 10;
+    k = Math.floor(k / 10)
+    if (sum >= 10) {
+      k++;
+      sum -= 10;
+    }
+    ret.push(sum)
+  }
+
+  for (; k > 0; k = Math.floor(k / 10)) {
+    ret.push(k % 10)
+  }
+  return ret.reverse();
+};
+```
+
+**复杂度分析**
+- 时间复杂度：O(N)，其中 N 为数组长度。
+- 空间复杂度：O(1)
